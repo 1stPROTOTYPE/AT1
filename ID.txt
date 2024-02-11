@@ -1,0 +1,19 @@
+package hm2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class hm2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://olx.ro");
+		driverChrome.manage().window().maximize();
+		driverChrome.findElement(By.id("onetrust-accept-btn-handler")).click();
+		driverChrome.findElement(By.id("search")).click();
+		driverChrome.findElement(By.id("search")).sendKeys("asus");
+		driverChrome.findElement(By.name("searchBtn")).click();
+		}
+
+}

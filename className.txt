@@ -1,0 +1,4 @@
+		ChromeDriver driverChrome = new ChromeDriver();
+		driverChrome.get("https://www.pandashop.md/");
+		driverChrome.manage().window().maximize();
+		driverChrome.findElement(By.className("nav-link")).click();
