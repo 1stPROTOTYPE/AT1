@@ -1,0 +1,25 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+
+
+driver = webdriver.Chrome()
+driver.maximize_window()
+
+driver.get("https://www.olx.ro/")
+
+search_box = driver.find_element_by_id("headerSearch")
+search_box.send_keys("telefon")
+search_box.send_keys(Keys.RETURN)
+
+time.sleep(3)
+
+
+first_product = driver.find_element_by_css_selector(".offer")
+first_product.click()
+
+add_to_cart_button = driver.find_element_by_id("buttonContact")
+add_to_cart_button.click()
+
+
+driver.quit()
